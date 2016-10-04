@@ -1,0 +1,8 @@
+c:\users\caleb\documents\visual studio 2015\Projects\hw2_cs5700\hw2_cs5700\bin\Debug\hw2_cs5700.exe.config
+c:\users\caleb\documents\visual studio 2015\Projects\hw2_cs5700\hw2_cs5700\bin\Debug\hw2_cs5700.exe
+c:\users\caleb\documents\visual studio 2015\Projects\hw2_cs5700\hw2_cs5700\bin\Debug\hw2_cs5700.pdb
+c:\users\caleb\documents\visual studio 2015\Projects\hw2_cs5700\hw2_cs5700\obj\Debug\hw2_cs5700.csprojResolveAssemblyReference.cache
+c:\users\caleb\documents\visual studio 2015\Projects\hw2_cs5700\hw2_cs5700\obj\Debug\hw2_cs5700.Properties.Resources.resources
+c:\users\caleb\documents\visual studio 2015\Projects\hw2_cs5700\hw2_cs5700\obj\Debug\hw2_cs5700.csproj.GenerateResource.Cache
+c:\users\caleb\documents\visual studio 2015\Projects\hw2_cs5700\hw2_cs5700\obj\Debug\hw2_cs5700.exe
+c:\users\caleb\documents\visual studio 2015\Projects\hw2_cs5700\hw2_cs5700\obj\Debug\hw2_cs5700.pdb
