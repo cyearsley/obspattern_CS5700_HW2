@@ -9,10 +9,10 @@ namespace StockSim
 {
     public class StockLoader
     {
-        public List<String> listOfSymbols;
+        public List<Stock> stocksRead;
         public StockLoader()
         {
-            this.listOfSymbols = new List<String>();
+            this.stocksRead = new List<Stock>();
         }
 
         public List<Stock> parseCsvFile()
@@ -23,8 +23,7 @@ namespace StockSim
             {
                 var line = reader.ReadLine();
                 var values = line.Split(new char[] { ',' }, 2);
-                stockList.Add(new Stock() { Symbol = values[0], CompanyName = values[1] });
-                listOfSymbols.Add(values[0]);
+                this.stocksRead.Add(new Stock() { Symbol = values[0], CompanyName = values[1] });
             }
 
 

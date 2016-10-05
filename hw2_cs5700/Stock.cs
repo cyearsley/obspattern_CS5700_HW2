@@ -29,7 +29,7 @@ namespace StockSim
             // For the moment, we'll have it simply write the new stock info to the console.  This code needs to be remove.
             // The observers will be responsible to presenting stock information to the user
 
-            Console.WriteLine($"{message.Symbol}\tprice={message.CurrentPrice}\tvolumn={message.CurrentVolume}");
+            Console.WriteLine($"{message.Symbol}\tprice={message.CurrentPrice}\t\tvolume={message.CurrentVolume}");
         }
     }
 }

@@ -34,6 +34,7 @@
             this.symbolIntroList = new System.Windows.Forms.ListBox();
             this.introPromptLabel = new System.Windows.Forms.Label();
             this.introCreatePortfolioButton = new System.Windows.Forms.Button();
+            this.removeSelectedSymbols = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // newPortfolioButton
@@ -74,8 +75,10 @@
             // symbolIntroList
             // 
             this.symbolIntroList.FormattingEnabled = true;
+            this.symbolIntroList.HorizontalScrollbar = true;
             this.symbolIntroList.Location = new System.Drawing.Point(238, 140);
             this.symbolIntroList.Name = "symbolIntroList";
+            this.symbolIntroList.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.symbolIntroList.Size = new System.Drawing.Size(118, 238);
             this.symbolIntroList.TabIndex = 3;
             this.symbolIntroList.SelectedIndexChanged += new System.EventHandler(this.symbolIntroList_SelectedIndexChanged);
@@ -102,12 +105,23 @@
             this.introCreatePortfolioButton.UseVisualStyleBackColor = true;
             this.introCreatePortfolioButton.Click += new System.EventHandler(this.introCreatePortfolioButton_Click);
             // 
+            // removeSelectedSymbols
+            // 
+            this.removeSelectedSymbols.Location = new System.Drawing.Point(362, 224);
+            this.removeSelectedSymbols.Name = "removeSelectedSymbols";
+            this.removeSelectedSymbols.Size = new System.Drawing.Size(75, 43);
+            this.removeSelectedSymbols.TabIndex = 6;
+            this.removeSelectedSymbols.Text = "Remove Selected";
+            this.removeSelectedSymbols.UseVisualStyleBackColor = true;
+            this.removeSelectedSymbols.Click += new System.EventHandler(this.removeSelectedSymbols_Click);
+            // 
             // appIntro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(463, 393);
+            this.Controls.Add(this.removeSelectedSymbols);
             this.Controls.Add(this.introPromptLabel);
             this.Controls.Add(this.symbolIntroList);
             this.Controls.Add(this.introSymbolCombo);
@@ -130,5 +144,6 @@
         private System.Windows.Forms.ListBox symbolIntroList;
         private System.Windows.Forms.Label introPromptLabel;
         private System.Windows.Forms.Button introCreatePortfolioButton;
+        private System.Windows.Forms.Button removeSelectedSymbols;
     }
 }

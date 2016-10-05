@@ -14,24 +14,29 @@ namespace StockSim
     public partial class appIntro : Form
     {
         private StockLoader stockLoader;
-        public String durp = "I haven't been set yet :(";
-        StockPortfolio portfolio = new StockPortfolio();
+        private List<Stock> selectedStocks = new List<Stock>();
+        public List<Stock> SelectedStocks
+        {
+            get
+            {
+                return this.selectedStocks;
+            }
+        }
         public appIntro()
         {
             this.stockLoader = new StockLoader();
             List<Stock> stocksRead = stockLoader.parseCsvFile();
-            Console.WriteLine("Some symbol: " + stocksRead[25].Symbol);
-            Console.WriteLine("Some C name: " + stocksRead[25].CompanyName);
 
             InitializeComponent();
             introSymbolCombo.Hide();
             symbolIntroList.Hide();
             introCreatePortfolioButton.Hide();
             introPromptLabel.Hide();
+            removeSelectedSymbols.Hide();
 
-            for (int i = 0; i < stockLoader.listOfSymbols.Count(); i++)
+            for (int i = 0; i < stockLoader.stocksRead.Count(); i++)
             {
-                introSymbolCombo.Items.Add(stockLoader.listOfSymbols[i]);
+                introSymbolCombo.Items.Add(stockLoader.stocksRead[i].Symbol);
             }
         }
 
@@ -48,6 +53,7 @@ namespace StockSim
             introPromptLabel.Show();
             newPortfolioButton.Hide();
             loadPortfolioButton.Hide();
+            removeSelectedSymbols.Show();
         }
 
         private void loadPortfolioButton_Click(object sender, EventArgs e)
@@ -78,7 +84,7 @@ namespace StockSim
                                 fileContents += temp.GetString(b).ToString();
                             }
                             fileContents.Trim(new Char[] { ' ', '?', '.' });
-                            string[] words = fileContents.Split(',');
+                            string[] words = fileContents.Split(',','{','}');
 
                             foreach (string s in words)
                             {
@@ -89,6 +95,7 @@ namespace StockSim
                             symbolIntroList.Show();
                             introCreatePortfolioButton.Show();
                             introPromptLabel.Show();
+                            removeSelectedSymbols.Show();
                             newPortfolioButton.Hide();
                             loadPortfolioButton.Hide();
                         }
@@ -108,7 +115,6 @@ namespace StockSim
 
         private void symbolIntroList_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void introPromptLabel_Click(object sender, EventArgs e)
@@ -121,8 +127,25 @@ namespace StockSim
             if (symbolIntroList.Items.Count == 0){}
             else
             {
-                this.durp = "I have been set!";
+                for (int i = 0; i < symbolIntroList.Items.Count; i++)
+                {
+                    for (int j = 0; j < stockLoader.stocksRead.Count; j++)
+                    {
+                        if (symbolIntroList.Items[i].ToString() == stockLoader.stocksRead[j].Symbol.ToString())
+                        {
+                            selectedStocks.Add(stockLoader.stocksRead.Find(x => x.Symbol == symbolIntroList.Items[i].ToString()));
+                        }
+                    }
+                }
                 this.Close();
+            }
+        }
+
+        private void removeSelectedSymbols_Click(object sender, EventArgs e)
+        {
+            // Referenced from: https://social.msdn.microsoft.com/Forums/en-US/8cabccca-f2b9-40c4-9cf5-89cbcbc06f03/remove-selected-items-from-listbox-when-pressed-delete-button?forum=csharplanguage
+            for (int i = symbolIntroList.SelectedIndices.Count - 1; i >= 0; i--) {
+                symbolIntroList.Items.RemoveAt(symbolIntroList.SelectedIndices[i]);
             }
         }
     }
