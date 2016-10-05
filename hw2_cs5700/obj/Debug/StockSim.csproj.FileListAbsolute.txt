@@ -1,0 +1,9 @@
+C:\Users\Caleb\documents\visual studio 2015\Projects\hw2_cs5700\hw2_cs5700\bin\Debug\hw2_cs5700.exe.config
+C:\Users\Caleb\documents\visual studio 2015\Projects\hw2_cs5700\hw2_cs5700\bin\Debug\hw2_cs5700.exe
+C:\Users\Caleb\documents\visual studio 2015\Projects\hw2_cs5700\hw2_cs5700\bin\Debug\hw2_cs5700.pdb
+C:\Users\Caleb\documents\visual studio 2015\Projects\hw2_cs5700\hw2_cs5700\obj\Debug\StockSim.appIntro.resources
+C:\Users\Caleb\documents\visual studio 2015\Projects\hw2_cs5700\hw2_cs5700\obj\Debug\hw2_cs5700.Properties.Resources.resources
+C:\Users\Caleb\documents\visual studio 2015\Projects\hw2_cs5700\hw2_cs5700\obj\Debug\StockSim.csproj.GenerateResource.Cache
+C:\Users\Caleb\documents\visual studio 2015\Projects\hw2_cs5700\hw2_cs5700\obj\Debug\hw2_cs5700.exe
+C:\Users\Caleb\documents\visual studio 2015\Projects\hw2_cs5700\hw2_cs5700\obj\Debug\hw2_cs5700.pdb
+C:\Users\Caleb\documents\visual studio 2015\Projects\hw2_cs5700\hw2_cs5700\obj\Debug\StockSim.csprojResolveAssemblyReference.cache
