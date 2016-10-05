@@ -27,7 +27,16 @@ namespace StockSim
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new appIntro());
+            appIntro startApp = new appIntro();
+            introGetIpPort getPort = new introGetIpPort();
+            Application.Run(startApp);
+            Application.Run(getPort);
+            Console.WriteLine("IP Address: " + getPort.ipAddress);
+            Console.WriteLine("Port Number: " + getPort.port);
+            //var introThread = new Thread(new ThreadStart(() => startLoadSaveGui(ref startApp)));
+            //introThread.Start();
+
+            //while (introThread.IsAlive){ System.Threading.Thread.Sleep(1000); }
 
             //stocksRead.ForEach(delegate (Stock stock)
             //{
@@ -45,7 +54,7 @@ namespace StockSim
             //portfolio.Add("GOOGL", new Stock() { });
             //portfolio.Add("MSFT", new Stock() { });
 
-            IPEndPoint simulatorEndPoint = new IPEndPoint(System.Net.IPAddress.Parse("127.0.0.1"), 12099);
+            IPEndPoint simulatorEndPoint = new IPEndPoint(System.Net.IPAddress.Parse(getPort.ipAddress), getPort.port);
 
             Communicator communicator = new Communicator() { Portfolio = portfolio, RemoteEndPoint = simulatorEndPoint };
             communicator.RemoteEndPoint = simulatorEndPoint;
@@ -54,13 +63,6 @@ namespace StockSim
             System.Threading.Thread.Sleep(1000);
             communicator.Stop();
             //t.Abort();
-        }
-
-        
-
-        static void testingThread()
-        {
-            
         }
     }
 }

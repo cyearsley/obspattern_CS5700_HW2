@@ -14,10 +14,14 @@ namespace StockSim
     public partial class appIntro : Form
     {
         private StockLoader stockLoader;
+        public String durp = "I haven't been set yet :(";
+        StockPortfolio portfolio = new StockPortfolio();
         public appIntro()
         {
             this.stockLoader = new StockLoader();
             List<Stock> stocksRead = stockLoader.parseCsvFile();
+            Console.WriteLine("Some symbol: " + stocksRead[25].Symbol);
+            Console.WriteLine("Some C name: " + stocksRead[25].CompanyName);
 
             InitializeComponent();
             introSymbolCombo.Hide();
@@ -65,6 +69,28 @@ namespace StockSim
                         using (myStream)
                         {
                             // Insert code to read the stream here.
+                            byte[] b = new byte[1024];
+                            UTF8Encoding temp = new UTF8Encoding(true);
+                            String fileContents = ""; ;
+
+                            while (myStream.Read(b, 0, b.Length) > 0)
+                            {
+                                fileContents += temp.GetString(b).ToString();
+                            }
+                            fileContents.Trim(new Char[] { ' ', '?', '.' });
+                            string[] words = fileContents.Split(',');
+
+                            foreach (string s in words)
+                            {
+                                symbolIntroList.Items.Add(s);
+                            }
+
+                            introSymbolCombo.Show();
+                            symbolIntroList.Show();
+                            introCreatePortfolioButton.Show();
+                            introPromptLabel.Show();
+                            newPortfolioButton.Hide();
+                            loadPortfolioButton.Hide();
                         }
                     }
                 }
@@ -95,7 +121,8 @@ namespace StockSim
             if (symbolIntroList.Items.Count == 0){}
             else
             {
-
+                this.durp = "I have been set!";
+                this.Close();
             }
         }
     }
