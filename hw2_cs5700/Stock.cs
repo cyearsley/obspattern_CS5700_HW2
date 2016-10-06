@@ -29,7 +29,22 @@ namespace StockSim
             // For the moment, we'll have it simply write the new stock info to the console.  This code needs to be remove.
             // The observers will be responsible to presenting stock information to the user
 
-            Console.WriteLine($"{message.Symbol}\tprice={message.CurrentPrice}\t\tvolume={message.CurrentVolume}");
+            //Console.WriteLine($"{message.Symbol}\tprice={message.CurrentPrice}\t\tvolume={message.CurrentVolume}");
+
+            // Update the current Stock
+            this.openingPrice = message.OpeningPrice;
+            this.previousClosingPrice = message.PreviousClosingPrice;
+            this.currentPrice = message.CurrentPrice;
+            this.bidPrice = message.BidPrice;
+            this.askPrice = message.AskPrice;
+            this.currentVolume = message.CurrentVolume;
+            this.averageVolume = message.AverageVolume;
+
+            Console.WriteLine("=================================");
+            Console.WriteLine("Name: " + this.CompanyName);
+            Console.WriteLine("Symbol: " + this.Symbol);
+            Console.WriteLine("Current Price: " + this.currentPrice);
+            Console.WriteLine("=================================");
         }
     }
 }

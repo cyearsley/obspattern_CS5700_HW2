@@ -8,3 +8,4 @@ C:\Users\Caleb\documents\visual studio 2015\Projects\hw2_cs5700\hw2_cs5700\obj\D
 C:\Users\Caleb\documents\visual studio 2015\Projects\hw2_cs5700\hw2_cs5700\obj\Debug\hw2_cs5700.pdb
 C:\Users\Caleb\documents\visual studio 2015\Projects\hw2_cs5700\hw2_cs5700\obj\Debug\StockSim.csprojResolveAssemblyReference.cache
 C:\Users\Caleb\documents\visual studio 2015\Projects\hw2_cs5700\hw2_cs5700\obj\Debug\StockSim.introGetIpPort.resources
+C:\Users\Caleb\documents\visual studio 2015\Projects\hw2_cs5700\hw2_cs5700\obj\Debug\StockSim.StockApplication.resources

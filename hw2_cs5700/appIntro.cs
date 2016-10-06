@@ -134,6 +134,7 @@ namespace StockSim
                         if (symbolIntroList.Items[i].ToString() == stockLoader.stocksRead[j].Symbol.ToString())
                         {
                             selectedStocks.Add(stockLoader.stocksRead.Find(x => x.Symbol == symbolIntroList.Items[i].ToString()));
+                            continue;
                         }
                     }
                 }
