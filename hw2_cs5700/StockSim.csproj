@@ -60,6 +60,8 @@
     <Compile Include="introGetIpPort.Designer.cs">
       <DependentUpon>introGetIpPort.cs</DependentUpon>
     </Compile>
+    <Compile Include="ISubject.cs" />
+    <Compile Include="ObserverDecorator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Stock.cs" />

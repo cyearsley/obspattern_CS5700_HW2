@@ -24,6 +24,7 @@ namespace StockSim
         /// <summary>
         /// This method just returns a status string, i.e., Monitoring if the communication is trying to receiving
         /// messages from the simulator.
+        /// 
         /// </summary>
         public string Status => _isMonitoring ? "Monitoring" : "";
 
