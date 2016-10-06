@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.stockPanelContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.appStockLabel = new System.Windows.Forms.Label();
             this.appStockCombo = new System.Windows.Forms.ComboBox();
             this.stockPriceButton = new System.Windows.Forms.Button();
@@ -42,14 +41,6 @@
             this.appListOfSymbolsList = new System.Windows.Forms.ListBox();
             this.appSavePortfolioButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // stockPanelContainer
-            // 
-            this.stockPanelContainer.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.stockPanelContainer.Location = new System.Drawing.Point(12, 12);
-            this.stockPanelContainer.Name = "stockPanelContainer";
-            this.stockPanelContainer.Size = new System.Drawing.Size(880, 613);
-            this.stockPanelContainer.TabIndex = 0;
             // 
             // appStockLabel
             // 
@@ -198,7 +189,6 @@
             this.Controls.Add(this.stockPriceButton);
             this.Controls.Add(this.appStockCombo);
             this.Controls.Add(this.appStockLabel);
-            this.Controls.Add(this.stockPanelContainer);
             this.Name = "StockApplication";
             this.Text = "StockApplication";
             this.Load += new System.EventHandler(this.StockApplication_Load);
@@ -208,8 +198,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel stockPanelContainer;
         private System.Windows.Forms.Label appStockLabel;
         private System.Windows.Forms.ComboBox appStockCombo;
         private System.Windows.Forms.Button stockPriceButton;

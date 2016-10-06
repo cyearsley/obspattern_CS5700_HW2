@@ -7,14 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Panels;
 
 namespace StockSim
 {
     public partial class StockApplication : Form
     {
+        StockContainer sc;
+
         public StockApplication()
         {
             InitializeComponent();
+            this.sc = new StockContainer();
+            this.Controls.Add(sc);
         }
 
         private void StockApplication_Load(object sender, EventArgs e)
@@ -29,7 +34,7 @@ namespace StockSim
 
         private void stockPriceButton_Click(object sender, EventArgs e)
         {
-
+            sc.Controls.Add(new StockPanel());
         }
 
         private void priceGraphButton_Click(object sender, EventArgs e)
