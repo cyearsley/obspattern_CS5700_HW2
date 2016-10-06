@@ -8,9 +8,9 @@ using StockSim;
 
 namespace Panels
 {
-    public class StockContainer : FlowLayoutPanel
+    public abstract class StockContainers : FlowLayoutPanel
     {
-        public StockContainer()
+        public StockContainers()
         {
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.Location = new System.Drawing.Point(12, 12);
@@ -20,7 +20,12 @@ namespace Panels
         }
     }
 
-    public class StockPanel : ObserverDecorator
+    public class StockContainer : StockContainers
+    {
+        //public 
+    }
+
+    public class StockPanel : Panel
     {
         public StockPanel()
         {

@@ -13,7 +13,7 @@ namespace StockSim
 {
     public partial class StockApplication : Form
     {
-        StockContainer sc;
+        StockContainers sc;
 
         public StockApplication()
         {
