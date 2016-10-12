@@ -33,9 +33,9 @@ namespace StockSim
             Communicator communicator = new Communicator() { Portfolio = portfolio, RemoteEndPoint = simulatorEndPoint };
             communicator.RemoteEndPoint = simulatorEndPoint;
 
-            communicator.Start();
+            //communicator.Start();
 
-            StockApplication stockApp = new StockApplication();
+            StockApplication stockApp = new StockApplication(ref communicator);
             Application.Run(stockApp);
 
             //var appThread = new Thread(new ThreadStart(() => runStockApplication(portfolio, getIpPort.ipAddress, getIpPort.port, ref communicator)));
@@ -45,11 +45,11 @@ namespace StockSim
             communicator.Stop();
         }
 
-        static void runStockApplication(StockPortfolio portfolio, String ipAddress, int port, ref Communicator communicator)
-        {
-            communicator.Start();
-            StockApplication run = new StockApplication();
-            Application.Run(run);
-        }
+        //static void runStockApplication(StockPortfolio portfolio, String ipAddress, int port, ref Communicator communicator)
+        //{
+        //    communicator.Start();
+        //    StockApplication run = new StockApplication();
+        //    Application.Run(run);
+        //}
     }
 }

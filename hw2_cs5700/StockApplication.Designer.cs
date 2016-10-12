@@ -40,6 +40,7 @@
             this.appRemoveStock = new System.Windows.Forms.Button();
             this.appListOfSymbolsList = new System.Windows.Forms.ListBox();
             this.appSavePortfolioButton = new System.Windows.Forms.Button();
+            this.stockContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // appStockLabel
@@ -171,12 +172,22 @@
             this.appSavePortfolioButton.UseVisualStyleBackColor = true;
             this.appSavePortfolioButton.Click += new System.EventHandler(this.appSavePortfolioButton_Click);
             // 
+            // stockContainer
+            // 
+            this.stockContainer.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.stockContainer.Location = new System.Drawing.Point(13, 12);
+            this.stockContainer.Name = "stockContainer";
+            this.stockContainer.Size = new System.Drawing.Size(879, 589);
+            this.stockContainer.TabIndex = 13;
+            this.stockContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.stockContainer_Paint);
+            // 
             // StockApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(1219, 637);
+            this.Controls.Add(this.stockContainer);
             this.Controls.Add(this.appSavePortfolioButton);
             this.Controls.Add(this.appListOfSymbolsList);
             this.Controls.Add(this.appRemoveStock);
@@ -210,5 +221,6 @@
         private System.Windows.Forms.Button appRemoveStock;
         private System.Windows.Forms.ListBox appListOfSymbolsList;
         private System.Windows.Forms.Button appSavePortfolioButton;
+        private System.Windows.Forms.FlowLayoutPanel stockContainer;
     }
 }

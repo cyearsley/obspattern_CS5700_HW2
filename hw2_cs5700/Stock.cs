@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StockSim
 {
-    public class Stock : ISubject
+    public class Stock
     {
         private String symbol;
         public String Symbol { get { return this.symbol; } set { this.symbol = value; } }
@@ -45,11 +45,11 @@ namespace StockSim
             this.currentVolume = message.CurrentVolume;
             this.averageVolume = message.AverageVolume;
 
-            Console.WriteLine("=================================");
-            Console.WriteLine("Name: " + this.CompanyName);
-            Console.WriteLine("Symbol: " + this.Symbol);
-            Console.WriteLine("Current Price: " + this.currentPrice);
-            Console.WriteLine("=================================");
+            //Console.WriteLine("=================================");
+            //Console.WriteLine("Name: " + this.CompanyName);
+            //Console.WriteLine("Symbol: " + this.Symbol);
+            //Console.WriteLine("Current Price: " + this.currentPrice);
+            //Console.WriteLine("=================================");
         }
     }
 }
