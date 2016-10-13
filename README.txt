@@ -1,0 +1,1 @@
+Public IP Address for AWS server: 54.213.214.150
