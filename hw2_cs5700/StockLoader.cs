@@ -18,7 +18,7 @@ namespace StockSim
         public List<Stock> parseCsvFile()
         {
             List<Stock> stockList = new List<Stock>();
-            var reader = new StreamReader(File.OpenRead(@"../../CompanyList.csv"));
+            var reader = new StreamReader(File.OpenRead(@"../StockSim/../../CompanyList.csv"));
             while (!reader.EndOfStream)
             {
                 var line = reader.ReadLine();

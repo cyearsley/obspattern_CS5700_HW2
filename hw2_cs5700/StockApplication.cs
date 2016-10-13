@@ -19,12 +19,17 @@ namespace StockSim
             InitializeComponent();
             this.comm = communicator;
             this.comm.Start();
+            
+            foreach (KeyValuePair<String, Stock> entry in comm.Portfolio)
+            {
+                this.appPortfolioList.Items.Add(entry.Value.CompanyName);
+            }
         }
 
         private void StockApplication_Load(object sender, EventArgs e)
         {
             Timer timer = new Timer();
-            timer.Interval = (1 * 750); // .1 secs
+            timer.Interval = (1 * 500); // .1 secs
             timer.Tick += new EventHandler(updateDisplay);
             timer.Start();
         }

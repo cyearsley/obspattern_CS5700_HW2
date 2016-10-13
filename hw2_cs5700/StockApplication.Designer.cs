@@ -108,7 +108,7 @@
             // 
             this.appPortfolioLabel.AutoSize = true;
             this.appPortfolioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.appPortfolioLabel.Location = new System.Drawing.Point(898, 245);
+            this.appPortfolioLabel.Location = new System.Drawing.Point(899, 241);
             this.appPortfolioLabel.Name = "appPortfolioLabel";
             this.appPortfolioLabel.Size = new System.Drawing.Size(158, 25);
             this.appPortfolioLabel.TabIndex = 7;
@@ -119,15 +119,15 @@
             this.appPortfolioList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.appPortfolioList.FormattingEnabled = true;
             this.appPortfolioList.ItemHeight = 20;
-            this.appPortfolioList.Location = new System.Drawing.Point(899, 274);
+            this.appPortfolioList.Location = new System.Drawing.Point(898, 269);
             this.appPortfolioList.Name = "appPortfolioList";
-            this.appPortfolioList.Size = new System.Drawing.Size(157, 284);
+            this.appPortfolioList.Size = new System.Drawing.Size(309, 284);
             this.appPortfolioList.TabIndex = 8;
             // 
             // appSavePortfolioButton
             // 
             this.appSavePortfolioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.appSavePortfolioButton.Location = new System.Drawing.Point(1079, 492);
+            this.appSavePortfolioButton.Location = new System.Drawing.Point(991, 559);
             this.appSavePortfolioButton.Name = "appSavePortfolioButton";
             this.appSavePortfolioButton.Size = new System.Drawing.Size(128, 66);
             this.appSavePortfolioButton.TabIndex = 12;

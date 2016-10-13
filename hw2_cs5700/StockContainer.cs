@@ -111,7 +111,7 @@ namespace Panels
             int dicIndex = 0;
             foreach (KeyValuePair<String, int> entry in stocks)
             {
-                String stockString = entry.Key + ": " + entry.Value + "\t --- Increased: " + this.increase_p;
+                String stockString = "\t" + (dicIndex+1).ToString() + ") " + entry.Key + ": " + entry.Value;
                 this.list.Items.Add(stockString);
                 dicIndex++;
             }

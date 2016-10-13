@@ -19,13 +19,6 @@ namespace StockSim
         private double askPrice;
         private double currentVolume;
         private double averageVolume;
-        //private List<ObserverDecorater>;
-
-        // TODO: Design and implement the properties and behaviors of this class.
-        public void Notify()
-        {
-
-        }
 
         public void Update(TickerMessage message)
         {

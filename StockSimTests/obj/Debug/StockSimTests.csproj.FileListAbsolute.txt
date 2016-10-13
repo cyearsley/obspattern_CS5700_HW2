@@ -1,0 +1,8 @@
+C:\Users\Caleb\documents\visual studio 2015\Projects\hw2_cs5700\StockSimTests\bin\Debug\StockSimTests.dll
+C:\Users\Caleb\documents\visual studio 2015\Projects\hw2_cs5700\StockSimTests\bin\Debug\StockSimTests.pdb
+C:\Users\Caleb\documents\visual studio 2015\Projects\hw2_cs5700\StockSimTests\bin\Debug\hw2_cs5700.exe
+C:\Users\Caleb\documents\visual studio 2015\Projects\hw2_cs5700\StockSimTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Caleb\documents\visual studio 2015\Projects\hw2_cs5700\StockSimTests\bin\Debug\hw2_cs5700.pdb
+C:\Users\Caleb\documents\visual studio 2015\Projects\hw2_cs5700\StockSimTests\obj\Debug\StockSimTests.csprojResolveAssemblyReference.cache
+C:\Users\Caleb\documents\visual studio 2015\Projects\hw2_cs5700\StockSimTests\obj\Debug\StockSimTests.dll
+C:\Users\Caleb\documents\visual studio 2015\Projects\hw2_cs5700\StockSimTests\obj\Debug\StockSimTests.pdb
