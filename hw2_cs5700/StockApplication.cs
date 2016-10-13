@@ -29,7 +29,7 @@ namespace StockSim
         private void StockApplication_Load(object sender, EventArgs e)
         {
             Timer timer = new Timer();
-            timer.Interval = (1 * 500); // .1 secs
+            timer.Interval = (1 * 500);
             timer.Tick += new EventHandler(updateDisplay);
             timer.Start();
         }
@@ -41,21 +41,17 @@ namespace StockSim
 
         private void stockPriceButton_Click(object sender, EventArgs e)
         {
-            //sc.Controls.Add(new StockPanel());
             List<Stock> stockList = new List<Stock>();
             foreach (KeyValuePair<String, Stock> entry in comm.Portfolio)
             {
                 stockList.Add(entry.Value);
             }
             comm.Portfolio.observers.Add(new StockPriceGrid(stockList, new Dictionary<String, int>()));
-            //updateDisplay();
-                //for (int i = 0; i < comm.Portfolio.observers.Count; i++) { }
-                //this.stockContainer.Controls.Add(comm.Portfolio.observers[0].create());
 }
 
         private void priceGraphButton_Click(object sender, EventArgs e)
         {
-            //updateDisplay();
+
         }
 
         private void volumeGraphButton_Click(object sender, EventArgs e)
@@ -75,7 +71,14 @@ namespace StockSim
 
         private void appSavePortfolioButton_Click(object sender, EventArgs e)
         {
-
+            String stocksFileString = "{";
+            foreach (KeyValuePair<String, Stock> entry in comm.Portfolio)
+            {
+                stocksFileString += entry.Key + ",";
+            }
+            stocksFileString = stocksFileString.TrimEnd(',');
+            stocksFileString += "}";
+            System.IO.File.WriteAllText(@"../StockSim/../../savedFile.txt", stocksFileString);
         }
 
         private void appListOfSymbolsList_SelectedIndexChanged(object sender, EventArgs e)
@@ -95,6 +98,11 @@ namespace StockSim
             {
                 this.stockContainer.Controls.Add(comm.Portfolio.observers[i].create());
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
