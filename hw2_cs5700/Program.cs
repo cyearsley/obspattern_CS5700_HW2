@@ -38,18 +38,23 @@ namespace StockSim
             StockApplication stockApp = new StockApplication(ref communicator);
             Application.Run(stockApp);
 
-            //var appThread = new Thread(new ThreadStart(() => runStockApplication(portfolio, getIpPort.ipAddress, getIpPort.port, ref communicator)));
+            //StockApplication stockApp = new StockApplication(ref communicator);
+            //var appThread = new Thread(new ThreadStart(() => runStockApplication(ref stockApp)));
             //appThread.Start();
+
+            //while (appThread.IsAlive)
+            //{
+            //    stockApp.updateDisplay();
+            //    System.Threading.Thread.Sleep(1000);
+            //}
 
             //while (appThread.IsAlive) { Thread.Sleep(1000); }
             communicator.Stop();
         }
 
-        //static void runStockApplication(StockPortfolio portfolio, String ipAddress, int port, ref Communicator communicator)
-        //{
-        //    communicator.Start();
-        //    StockApplication run = new StockApplication();
-        //    Application.Run(run);
-        //}
+        static void runStockApplication(ref StockApplication stockApp)
+        {
+            Application.Run(stockApp);
+        }
     }
 }

@@ -23,7 +23,10 @@ namespace StockSim
 
         private void StockApplication_Load(object sender, EventArgs e)
         {
-
+            Timer timer = new Timer();
+            timer.Interval = (1 * 750); // .1 secs
+            timer.Tick += new EventHandler(updateDisplay);
+            timer.Start();
         }
 
         private void appStockCombo_SelectedIndexChanged(object sender, EventArgs e)
@@ -40,13 +43,14 @@ namespace StockSim
                 stockList.Add(entry.Value);
             }
             comm.Portfolio.observers.Add(new StockPriceGrid(stockList, new Dictionary<String, int>()));
-                for (int i = 0; i < comm.Portfolio.observers.Count; i++) { }
+            //updateDisplay();
+                //for (int i = 0; i < comm.Portfolio.observers.Count; i++) { }
                 //this.stockContainer.Controls.Add(comm.Portfolio.observers[0].create());
 }
 
         private void priceGraphButton_Click(object sender, EventArgs e)
         {
-            updateDisplay();
+            //updateDisplay();
         }
 
         private void volumeGraphButton_Click(object sender, EventArgs e)
@@ -79,7 +83,7 @@ namespace StockSim
 
         }
 
-        public void updateDisplay()
+        public void updateDisplay(object sender, EventArgs e)
         {
             this.stockContainer.Controls.Clear();
             for (int i = 0; i < comm.Portfolio.observers.Count; i++)

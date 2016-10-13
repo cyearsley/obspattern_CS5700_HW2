@@ -36,9 +36,6 @@
             this.volumeGraphButton = new System.Windows.Forms.Button();
             this.appPortfolioLabel = new System.Windows.Forms.Label();
             this.appPortfolioList = new System.Windows.Forms.ListBox();
-            this.appAddStock = new System.Windows.Forms.Button();
-            this.appRemoveStock = new System.Windows.Forms.Button();
-            this.appListOfSymbolsList = new System.Windows.Forms.ListBox();
             this.appSavePortfolioButton = new System.Windows.Forms.Button();
             this.stockContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
@@ -127,44 +124,10 @@
             this.appPortfolioList.Size = new System.Drawing.Size(157, 284);
             this.appPortfolioList.TabIndex = 8;
             // 
-            // appAddStock
-            // 
-            this.appAddStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.appAddStock.Location = new System.Drawing.Point(980, 565);
-            this.appAddStock.Name = "appAddStock";
-            this.appAddStock.Size = new System.Drawing.Size(75, 36);
-            this.appAddStock.TabIndex = 9;
-            this.appAddStock.Text = "+";
-            this.appAddStock.UseVisualStyleBackColor = true;
-            this.appAddStock.Click += new System.EventHandler(this.appAddStock_Click);
-            // 
-            // appRemoveStock
-            // 
-            this.appRemoveStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.appRemoveStock.Location = new System.Drawing.Point(899, 564);
-            this.appRemoveStock.Name = "appRemoveStock";
-            this.appRemoveStock.Size = new System.Drawing.Size(75, 36);
-            this.appRemoveStock.TabIndex = 10;
-            this.appRemoveStock.Text = "-";
-            this.appRemoveStock.UseVisualStyleBackColor = true;
-            this.appRemoveStock.Click += new System.EventHandler(this.appRemoveStock_Click);
-            // 
-            // appListOfSymbolsList
-            // 
-            this.appListOfSymbolsList.Enabled = false;
-            this.appListOfSymbolsList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.appListOfSymbolsList.FormattingEnabled = true;
-            this.appListOfSymbolsList.ItemHeight = 20;
-            this.appListOfSymbolsList.Location = new System.Drawing.Point(1079, 274);
-            this.appListOfSymbolsList.Name = "appListOfSymbolsList";
-            this.appListOfSymbolsList.Size = new System.Drawing.Size(128, 224);
-            this.appListOfSymbolsList.TabIndex = 11;
-            this.appListOfSymbolsList.SelectedIndexChanged += new System.EventHandler(this.appListOfSymbolsList_SelectedIndexChanged);
-            // 
             // appSavePortfolioButton
             // 
             this.appSavePortfolioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.appSavePortfolioButton.Location = new System.Drawing.Point(1079, 534);
+            this.appSavePortfolioButton.Location = new System.Drawing.Point(1079, 492);
             this.appSavePortfolioButton.Name = "appSavePortfolioButton";
             this.appSavePortfolioButton.Size = new System.Drawing.Size(128, 66);
             this.appSavePortfolioButton.TabIndex = 12;
@@ -189,9 +152,6 @@
             this.ClientSize = new System.Drawing.Size(1219, 637);
             this.Controls.Add(this.stockContainer);
             this.Controls.Add(this.appSavePortfolioButton);
-            this.Controls.Add(this.appListOfSymbolsList);
-            this.Controls.Add(this.appRemoveStock);
-            this.Controls.Add(this.appAddStock);
             this.Controls.Add(this.appPortfolioList);
             this.Controls.Add(this.appPortfolioLabel);
             this.Controls.Add(this.volumeGraphButton);
@@ -217,9 +177,6 @@
         private System.Windows.Forms.Button volumeGraphButton;
         private System.Windows.Forms.Label appPortfolioLabel;
         private System.Windows.Forms.ListBox appPortfolioList;
-        private System.Windows.Forms.Button appAddStock;
-        private System.Windows.Forms.Button appRemoveStock;
-        private System.Windows.Forms.ListBox appListOfSymbolsList;
         private System.Windows.Forms.Button appSavePortfolioButton;
         private System.Windows.Forms.FlowLayoutPanel stockContainer;
     }

@@ -24,13 +24,19 @@ namespace StockSim
         {
             for (int i = 0; i < observers.Count; i++)
             {
-                //Console.WriteLine("TYPE: " + this.observers[i].GetType().ToString());
+
+                if (observers[i].remove_p())
+                {
+                    observers.RemoveAt(i);
+                    i--;
+                }
+
                 List<Stock> stockList = new List<Stock>();
                 foreach (KeyValuePair<String, Stock> entry in this)
                 {
                     stockList.Add(entry.Value);
                 }
-                if (this.observers[i].GetType().ToString() == "Panels.StockPriceGrid")
+                if (this.observers[i].GetType().ToString() == "Panels.StockPriceGrid" && !this.observers[i].remove_p())
                 {
                     this.observers[i] = new StockPriceGrid(stockList, this.observers[i].getStocks());
                 }
@@ -44,7 +50,8 @@ namespace StockSim
             for (int i = 0; i < stocks.Count; i++)
             {
                 Console.WriteLine("Symbol: " + stocks[i].Symbol);
-                this.Add(stocks[i].Symbol, stocks[i]);
+                if (!this.ContainsKey(stocks[i].Symbol))
+                    this.Add(stocks[i].Symbol, stocks[i]);
             }
         }
 
