@@ -22,13 +22,6 @@ namespace StockSim
 
         public void Update(TickerMessage message)
         {
-            // TODO: Update the state of the stock object
-
-            // For the moment, we'll have it simply write the new stock info to the console.  This code needs to be remove.
-            // The observers will be responsible to presenting stock information to the user
-
-            //Console.WriteLine($"{message.Symbol}\tprice={message.CurrentPrice}\t\tvolume={message.CurrentVolume}");
-
             // Update the current Stock
             this.openingPrice = message.OpeningPrice;
             this.previousClosingPrice = message.PreviousClosingPrice;
